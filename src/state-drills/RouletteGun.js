@@ -7,15 +7,13 @@ class RouletteGun extends React.Component {
       chamber: null,
       spinningTheChamber: false,  
       bulletInChamber: 8,
-    }
-    console.log(this.state.bulletInChamber + ' = Loaded Chamber')
+    }   
     this.handleButtonClick = () => {
       this.setState({
         spinningTheChamber: true,
-        chamber: (Math.ceil(Math.random() * 8)),
-      })
-      console.log(this.state.chamber + ' = Our chamber fired')
-    }
+        chamber: Math.ceil(Math.random() * 8,
+      )})
+      }
     this.isChamberSpin = () => {
       if (this.state.spinningTheChamber) {
       if (this.state.chamber === this.state.bulletInChamber) {
@@ -31,6 +29,7 @@ class RouletteGun extends React.Component {
     this.setState({
       bulletInChamber: (Math.ceil(Math.random() * 8)),
     })
+    console.log(this.state.chamber + ' = Our chamber fired')
   }
     
 /*   componentDidMount() {
